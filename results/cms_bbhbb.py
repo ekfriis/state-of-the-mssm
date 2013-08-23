@@ -46,5 +46,5 @@ for line in raw_data_minus_200.split('\n'):
     if not line:
         continue
     line = line.replace('|', ' ').strip()
-    fields = [float(x) for x in line.split(' ')]
+    fields = [float(x) for x in line.split(' ') if x != '']
     limit.append((fields[0], fields[1]))
