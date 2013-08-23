@@ -29,3 +29,8 @@ for line in _raw_data.split('\n'):
         continue
     fields = [float(x) for x in line.split(' ') if x != '']
     limit.append((fields[0], fields[-1]))
+
+# add some non-visible points to prevent rendering errors of the fill.
+
+limit.append((limit[-1][0], limit[-1][1] + 50))
+limit.append((limit[0][0] - 10, limit[-1][1]))
