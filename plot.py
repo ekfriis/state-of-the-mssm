@@ -63,9 +63,9 @@ if __name__ == "__main__":
     background.SetTitle("")
     background.Draw()
 
-    theory_label = ROOT.TPaveText(0.3, 0.165, 0.9, 0.23, "NDC")
+    theory_label = ROOT.TPaveText(0.4, 0.165, 0.9, 0.23, "NDC")
     unsuckify(theory_label)
-    theory_label.SetTextSize(0.04)
+    theory_label.SetTextSize(0.035)
     theory_label.SetTextAlign(32)
     theory_label.AddText("MSSM m_{h}^{max} scenario, M_{SUSY} = 1 TeV")
     theory_label.Draw()
@@ -88,6 +88,10 @@ if __name__ == "__main__":
     cms_charged_graph.SetLineColor(ROOT.EColor.kMagenta + 3)
     cms_charged_graph.SetLineStyle(2)
 
+    cms_hbb_graph = make_tgraph(results.cms_bbhbb.limit)
+    cms_hbb_graph.SetLineColor(ROOT.EColor.kMagenta + 3)
+    cms_hbb_graph.SetLineStyle(1)
+
     atlas_graph = make_tgraph(results.atlas_htt.limit)
     atlas_graph.SetLineColor(ROOT.EColor.kRed)
 
@@ -97,7 +101,7 @@ if __name__ == "__main__":
     atlas_charged_graph.SetLineColor(ROOT.EColor.kRed)
     atlas_charged_graph.SetLineStyle(2)
 
-    legend = ROOT.TLegend(0.58, 0.25, 0.90, 0.42, "", "NDC")
+    legend = ROOT.TLegend(0.60, 0.25, 0.92, 0.42, "", "NDC")
     unsuckify(legend)
 
     # NB the draw and legend add orders are different :/
@@ -105,11 +109,13 @@ if __name__ == "__main__":
     cms_graph.Draw("lf")
     d0_graph.Draw()
     cms_charged_graph.Draw()
+    cms_hbb_graph.Draw()
     atlas_graph.Draw()
     atlas_charged_graph.Draw()
 
     legend.AddEntry(cms_graph, results.cms_htt.label, "f")
     legend.AddEntry(cms_charged_graph, results.cms_chargedh.label, "l")
+    legend.AddEntry(cms_hbb_graph, results.cms_bbhbb.label, "l")
     legend.AddEntry(atlas_graph, results.atlas_htt.label, "l")
     legend.AddEntry(atlas_charged_graph, results.atlas_chargedh.label, "l")
     legend.AddEntry(d0_graph, results.d0.label, "l")
