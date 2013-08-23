@@ -48,6 +48,6 @@ limit = [
 ]
 
 # extend limit blob outside visible area to prevent rendering errors
-limit.append((550, 2.405361))
-limit.append((550, 0))
-limit.append((550, -100))
+limit.append((850, 2.405361))
+limit.append((850, 0))
+limit.append((850, -100))
