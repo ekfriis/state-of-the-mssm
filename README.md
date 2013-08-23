@@ -4,7 +4,21 @@ MSSM Summary Plot
 A plot summarizing all current experimental bounds on the MSSM mA-tanBeta
 parameter space.
 
-Current results
+Usage: 
+
+```shell
+python plot.py
+```
+
+You'll need PyROOT, which you can get by ``cmsenv``-ing inside any recent CMSSW
+release.
+
+Results
+-------
+
+![MSSM Summary Plot](https://raw.github.com/ekfriis/state-of-the-mssm/master/state-of-the-mssm.png)
+
+Data provenance
 ---------------
 
 - CMS HIG-12-050 H→ττ (17/fb)
