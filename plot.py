@@ -72,9 +72,8 @@ if __name__ == "__main__":
     cms_graph.SetFillStyle(1001)
 
     cms_charged_graph = make_tgraph(results.cms_chargedh.limit)
-    cms_charged_graph.SetLineColor(ROOT.EColor.kMagenta+3)
+    cms_charged_graph.SetLineColor(ROOT.EColor.kMagenta + 3)
     cms_charged_graph.SetLineStyle(2)
 
     atlas_graph = make_tgraph(results.atlas_htt.limit)
     atlas_graph.SetLineColor(ROOT.EColor.kRed)
-
