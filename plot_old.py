@@ -59,6 +59,7 @@ cms_result = [ (-100, 1000) ] + cms_result + [ (1000, 1000) ]
 
 
 # Extractd from HIG-11-008 NOTE THESE ARE CHARGED HIGGS MASSES
+# (HP, TB) -> (MA0, TB) using Feynhiggs
 cms_charged_hp = [
     (120.03018282166263,18.789237668161434),
     (140.23212027135793,24.798206278026907),
