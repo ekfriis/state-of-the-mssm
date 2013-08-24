@@ -78,6 +78,13 @@ if __name__ == "__main__":
     lep_graph.SetFillStyle(1001)
     lep_graph.SetLineWidth(-9900)
 
+    # The non-excluded parameter space at very low tanB
+    lep_scoop = make_tgraph(results.lep.lower_limit)
+    lep_scoop.SetFillColor(ROOT.EColor.kWhite)
+    lep_scoop.SetLineColor(ROOT.EColor.kWhite)
+    lep_scoop.SetFillStyle(1001)
+    lep_scoop.SetLineWidth(-9900)
+
     cms_graph = make_tgraph(results.cms_htt.limit)
     cms_color = ROOT.TColor(1501, 0.463, 0.867, 0.957)
     cms_graph.SetLineWidth(9902)
@@ -106,6 +113,7 @@ if __name__ == "__main__":
 
     # NB the draw and legend add orders are different :/
     lep_graph.Draw("lf")
+    lep_scoop.Draw("lf")
     cms_graph.Draw("lf")
     d0_graph.Draw()
     cms_charged_graph.Draw()
