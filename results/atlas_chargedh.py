@@ -5,7 +5,7 @@
 # From mH vs tanBeta exclusion (Fig 8)
 #
 
-label = "ATLAS H+ 4.6/fb"
+label = "ATLAS H^{+} 4.6/fb"
 
 upper_bound_mh_v_tanbeta = [
     (89.73892423637687, 18.69109947643979),

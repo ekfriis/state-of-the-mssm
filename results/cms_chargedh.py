@@ -2,7 +2,7 @@
 #
 # From HIG-11-019
 
-label = "CMS H+ 2.2/fb"
+label = "CMS H^{+} 2.2/fb"
 
 # These are m_H+ vs tangent beta
 cms_charged_hp = [
