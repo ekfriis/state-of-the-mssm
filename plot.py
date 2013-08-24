@@ -89,6 +89,7 @@ if __name__ == "__main__":
     cms_color = ROOT.TColor(1501, 0.463, 0.867, 0.957)
     cms_graph.SetLineWidth(9902)
     cms_graph.SetFillColor(1501)
+    cms_graph.SetLineColor(1501)
     cms_graph.SetFillStyle(1001)
 
     cms_charged_graph = make_tgraph(results.cms_chargedh.limit)
